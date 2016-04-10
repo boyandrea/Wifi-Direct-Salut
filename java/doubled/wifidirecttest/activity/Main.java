@@ -27,7 +27,7 @@ public class Main extends AppCompatActivity implements SalutDataCallback, View.O
     public Button hostingBtn,startBtn;
     public Button discoverBtn;
     public EditText namaHost;
-    public static final String TAG = "SalutTestApp";
+    public static final String TAG = "SalutTestAppp";
     public SalutDataReceiver dataReceiver;
     public SalutServiceData serviceData;
     public Salut network;
