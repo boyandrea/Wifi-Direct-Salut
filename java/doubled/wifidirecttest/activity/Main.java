@@ -56,9 +56,6 @@ public class Main extends AppCompatActivity implements SalutDataCallback, View.O
         discoverBtn.setOnClickListener(this);
         startBtn.setOnClickListener(this);
 
-
-        /*Create a data receiver object that will bind the callback
-        with some instantiated object from our app. */
         dataReceiver = new SalutDataReceiver(this, this);
         /*Populate the details for our awesome service. */
         serviceData = new SalutServiceData("testAwesomeService", 60606, "HOST");
