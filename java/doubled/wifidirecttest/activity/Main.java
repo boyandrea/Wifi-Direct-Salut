@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.bluelinelabs.logansquare.LoganSquare;
@@ -39,7 +40,7 @@ public class Main extends AppCompatActivity implements SalutDataCallback, View.O
     public Salut network;
     public Button hostingBtn;
     public Button discoverBtn;
-    public Button startBtn;
+    public ListView listView;
     public boolean isHost = false;
     public boolean isClient = false;
 
@@ -50,11 +51,11 @@ public class Main extends AppCompatActivity implements SalutDataCallback, View.O
 
         hostingBtn = (Button) findViewById(R.id.btnHost);
         discoverBtn = (Button) findViewById(R.id.btnDiscover);
-        startBtn = (Button) findViewById(R.id.btnStart);
+        listView = (ListView) findViewById(R.id.listView);
 
         hostingBtn.setOnClickListener(this);
         discoverBtn.setOnClickListener(this);
-        startBtn.setOnClickListener(this);
+
 
         dataReceiver = new SalutDataReceiver(this, this);
         /*Populate the details for our awesome service. */
@@ -92,11 +93,11 @@ public class Main extends AppCompatActivity implements SalutDataCallback, View.O
                 if(!isClient && isHost == false){
                     setAsHost();
                     isHost = true;
-                    hostingBtn.setText("Stop Client");
+                    hostingBtn.setText("Stop Host");
                 }else if(isHost){
                     isHost = false;
                     network.stopNetworkService(true);
-                    hostingBtn.setText("Start Client");
+                    hostingBtn.setText("Start Host");
                 }
                 break;
             case R.id.btnStart:

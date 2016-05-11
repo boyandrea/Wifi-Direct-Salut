@@ -2,36 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Host"
-        android:gravity="center"
-        android:id="@+id/namaHost"
-        android:text="myHost" />
+        android:orientation="horizontal">
 
-    <Button
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="HOST"
+            android:id="@+id/btnHost"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="DISCOVER"
+            android:id="@+id/btnDiscover"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Service"
-        android:id="@+id/btnStart"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="HOST"
-        android:id="@+id/btnHost"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DISCOVER"
-        android:id="@+id/btnDiscover"
+        android:id="@+id/listView"
         android:layout_gravity="center_horizontal" />
 
 
